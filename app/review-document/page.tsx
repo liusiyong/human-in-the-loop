@@ -307,7 +307,7 @@ export default function JsonViewerPage() {
             </CardHeader>
             <CardContent className="flex-1 overflow-hidden">
               <Tabs defaultValue={Object.keys(tabularData)[0]} className="w-full">
-                <div className="flex justify-end mb-4">
+                <div className="flex justify-center mb-2">
                   <TabsList className="inline-flex h-10 items-center justify-start rounded-md bg-muted p-1 text-muted-foreground w-fit">
                     {Object.keys(tabularData).map((tableName) => (
                       <TabsTrigger key={tableName} value={tableName} className="capitalize">
@@ -319,7 +319,7 @@ export default function JsonViewerPage() {
                 
                 {Object.entries(tabularData).map(([tableName, tableData]) => (
                   <TabsContent key={tableName} value={tableName} className="mt-4">
-                    <div className="mb-4 flex justify-end">
+                    <div className="mb-2 flex justify-end">
                       <Button 
                         onClick={() => addArrayItem(tableName)}
                         size="sm"
